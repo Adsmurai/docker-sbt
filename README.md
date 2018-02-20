@@ -9,10 +9,9 @@ has some extra nice features, like UIDs and GIDs mapping.
 
 ## Usage instructions
 
-You
+You can execute the dockerized SBT with:
 
 ```bash
-
 docker run                                                  \
        --rm                                                 \
        -it                                                  \
