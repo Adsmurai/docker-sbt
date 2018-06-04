@@ -9,7 +9,7 @@
 
 FROM openjdk:8-jdk-alpine
 
-LABEL maintainer "Andrés Correa Casablanca <andreu@adsmurai.com>"
+LABEL maintainer "Toni Penya-Alba <toni.penya@adsmurai.com>"
 
 ENV HOME /user
 ENV SCALA_VERSION 2.12.4
@@ -22,6 +22,10 @@ RUN set -o errexit -o nounset                                                   
 		bash                                                                                                           \
 		libstdc++                                                                                                      \
 	                                                                                                                   \
+    && echo "Installing git"                                                                                           \
+    && apk add --no-cache                                                                                              \                                                                                       
+        git                                                                                                            \
+                                                                                                                       \
 	&& echo "Installing build dependencies"                                                                            \
 	&& apk add --no-cache --virtual .build-deps                                                                        \
 		ca-certificates                                                                                                \
